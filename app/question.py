@@ -44,3 +44,10 @@ def update_question(id):
     }
     qtn[0] = question
     return jsonify({'question': qtn[0]})
+
+#delete question
+@app.route('/api/v1/questions/<string:id>/', methods=['DELETE'])
+def delete_question(id):
+    qtn = [question for question in Questions if question['id']== int(id)]
+    Questions.remove(qtn[0])
+    return jsonify(Questions)
