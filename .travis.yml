@@ -8,4 +8,7 @@ python:
 # install dependency
 install: 
   -pip install -r requirements.txt
+cache: pip
 
+script: python -m pytest && coverage run -m pytest && coverage report
+after_success: coveralls
