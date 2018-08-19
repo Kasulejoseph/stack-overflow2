@@ -34,26 +34,3 @@ def question():
         }
     ]
     return questions
-
-def answer():
-    answers = [
-        {
-            "id": 1,
-            "answer": "",
-            "author": "richard",
-            "date": "12-09-2017"
-        },
-        {
-            "id":2,
-            "answer":"",
-            "author":"denis",
-            "date": "24-08-2006"
-        },
-        {
-            "id":3,
-            "answer": " ",
-            "author": "louis",
-            "date": "30-04-2009"
-        },
-    ]
-    return answers
