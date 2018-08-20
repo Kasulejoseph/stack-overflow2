@@ -2,12 +2,15 @@ language: python
 
 python:
     -3.5
-    -3.6
 
 # install dependency
 install: 
   -pip install -r requirements.txt
+  -pip install coveralls
 cache: pip
 
-script: python -m pytest && coverage run -m pytest && coverage report
-after_success: coveralls
+script:
+  -python3 -m pytest --cov=app tests/
+  
+after_success: 
+  -coveralls
