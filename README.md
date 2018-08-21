@@ -47,7 +47,7 @@ Ensure you have **Python** installed by entering ```python --v``` on your termin
 ## Running the automated tests
 from the root folder of the application run 
 ``` $ python -m unittest discover ```
-## Test running routes
+## Test Routes
 |Method | End-Point | Functionality|
 | ---| --- | ---|
 | POST |api/v1/questions/ | User post a question. |
@@ -61,7 +61,7 @@ from the root folder of the application run
 **Kasule Joseph**
  
 ## Acknowlegments
-**Nalubega Joyce**
-**team oopia**
+- **Nalubega Joyce**
+- **team oopia**
 
  
