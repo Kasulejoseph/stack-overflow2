@@ -58,7 +58,7 @@ from the root folder of the application run
 | POST |api/v1/questions/id/answer | User post an answer to a question. |
 
 ## Author 
-**Kasule Joseph**
+[Kasule Joseph](https://github.com/Kasulejoseph)
  
 ## Acknowlegments
 - **Nalubega Joyce**
