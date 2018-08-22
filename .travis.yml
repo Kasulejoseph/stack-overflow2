@@ -5,12 +5,11 @@ python:
 
 # install dependency
 install: 
-  - pip install -r requirement.txt
+  - pip install -r requirements.txt
   - pip install coveralls
 
 script:
-  - python3 -m pytest --cov=app tests/
-  - coverage run --source=app run.py test
+  - python3 -m pytest 
   
 after_success: 
   - coveralls
