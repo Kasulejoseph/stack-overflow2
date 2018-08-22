@@ -6,11 +6,12 @@ python:
 # install dependency
 install: 
   - pip install -r requirements.txt
+  - python3 -m pytest 
+  - pip install pytest-cov
   - pip install coveralls
 
 script:
-  - python3 -m pytest 
-  - coverage run --source=app run.py test
+  - pytest --cov = app/
   - coverage report
   
 after_success: 
