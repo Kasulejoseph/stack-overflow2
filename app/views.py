@@ -24,7 +24,7 @@ def add_questions():
         "date_created": data['date_created'],
     })
     response.status_code = 201
-    return jsonify({'question': Questions})
+    return response
 
 #update question
 @app.route('/api/v1/questions/<string:id>/', methods=['PUT'])
