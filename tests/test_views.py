@@ -1,6 +1,7 @@
 from flask import url_for, request
+
 import unittest
-import os,json,sys
+import os,json,sys,datetime, time
 from app import app
 from flask import current_app
 class QuestionTestCase(unittest.TestCase):
@@ -8,13 +9,14 @@ class QuestionTestCase(unittest.TestCase):
     
     def setUp(self):
         """ initatializing tests """
+        self.date2 = str(datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'))
         self.app_context = app.app_context()
         self.client = app.test_client(use_cookies=True)
         self.app_context.push()
         self.question = {  
             "answers": 2,
             "author": "erick",
-            "date_created": "04-05-2018",
+            "date_created": '{}' .format(self.date2),
             "id": 1,
             "question": "how to capture the spaces in regular expression?"
             }
@@ -36,7 +38,7 @@ class QuestionTestCase(unittest.TestCase):
         self.assertIn(author, str(result.data))
 
     def test_api_can_get_question_by_id(self):
-        """Test API can get a single bucketlist by using it's id."""
+        """Test API can get a single question by using it's id."""
         rv = self.client.post('/api/v1/questions/',
         content_type='application/json', data=json.dumps(self.question) )
         self.assertEqual(rv.status_code, 201)
@@ -71,7 +73,7 @@ class QuestionTestCase(unittest.TestCase):
         rv = self.client.put(
             '/api/v1/questions/2/', content_type='application/json',
             data = json.dumps({
-            "date_modified": "9/07/2003",
+            "date_modified": '{}' .format(self.date2),
             "author": "erick",
             "date_created": "04-25-2012",
             "id": 1,
