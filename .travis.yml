@@ -10,6 +10,7 @@ install:
 
 script:
   - python3 -m pytest
+  - coverage report
   
 after_success: 
   - coveralls
