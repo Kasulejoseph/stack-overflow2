@@ -10,7 +10,7 @@ install:
 
 script:
   - python3 -m pytest
-  - coverage run --source=app run.py test
+  - coverage report
   
 after_success: 
   - coveralls
