@@ -9,7 +9,7 @@ install:
   - pip install coveralls
 
 script:
-  - python3 -m pytest --cover-package=app tests/
+  - nosetests -v --with-coverage --cover-package="app"
   
 after_success: 
   - coveralls
