@@ -57,6 +57,8 @@ from the root folder of the application run
 | DELETE |api/v1/questions/id | User delete a question he posted. |
 | POST |api/v1/questions/id/answer | User post an answer to a question. |
 
+The app is hosted on heroku click [here](https://stack-litekasule-api.herokuapp.com/api/v1/questions/)
+
 ## Author 
 [Kasule Joseph](https://github.com/Kasulejoseph)
  
